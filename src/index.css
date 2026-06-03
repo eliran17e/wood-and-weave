@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-sand-50 text-warmstone-deep font-body antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display tracking-tight;
+}
+
+/* Hide default focus ring; we use ring utility per-element */
+*:focus { outline: none; }
+*:focus-visible { @apply ring-2 ring-olive/40 ring-offset-2 ring-offset-sand-50 rounded; }
+
+/* Fabric slider — progress bar that fills up across the active tab,
+   reset on each tab change via React's `key` prop on the span. */
+@keyframes fabric-progress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
